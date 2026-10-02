@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Chatbot
+
+A ChatGPT-style AI chatbot built with **Next.js 15**, featuring real-time AI responses, conversation history, markdown rendering, authentication, and shareable chats.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Auth**: Clerk
+- **State Management**: Redux Toolkit + Zustand
+- **UI**: Radix UI, Tailwind CSS v4, Framer Motion
+- **Markdown**: react-markdown with syntax highlighting, math (KaTeX), and GFM
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- A [Clerk](https://clerk.com) account for authentication
+
+### Installation
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 💬 Real-time AI chat with streaming responses
+- 🔐 Authentication via Clerk
+- 📝 Markdown rendering with syntax highlighting & math support
+- 🔗 Shareable chat links
+- 🗂️ Conversation history & management
+- 🌙 Dark mode UI
+- 📱 Responsive layout with sidebar
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/          # Next.js App Router pages
+components/   # UI components (sidebar, messages, input, etc.)
+hooks/        # Custom React hooks
+lib/          # Utility functions and AI helpers
+state/        # Redux store and API slices
+public/       # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
