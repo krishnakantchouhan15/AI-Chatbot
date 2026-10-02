@@ -37,7 +37,7 @@ export const graphqlApi = createApi({
   reducerPath: 'graphqlApi',
   tagTypes: ['Group'], // Add this line
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://chatgpt-lye6.onrender.com/graphql',
+    baseUrl: '/api/graphql',
     prepareHeaders: (headers) => {
       headers.set('Content-Type', 'application/json');
       return headers;

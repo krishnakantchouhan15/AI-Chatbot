@@ -25,13 +25,19 @@ npm install
 
 ### Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env.local` file in the root directory (or copy `.env.example`):
 
 ```env
+# Clerk Authentication Keys
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
+
+# Clerk Redirect URLs
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# Google Gemini API Key
+GOOGLE_API_KEY=your_gemini_api_key_here
 ```
 
 ### Run Development Server

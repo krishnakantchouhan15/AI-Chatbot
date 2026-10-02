@@ -50,7 +50,7 @@ export const sendMessage = async ({
 
   
   const requestBody = {
-    model: "deepseek/deepseek-chat",
+    model: "google/gemini-2.0-flash-lite-preview-02-05:free",
     frequency_penalty: 1,
     logprobs: true,
     top_logprobs: 5,
@@ -71,7 +71,7 @@ export const sendMessage = async ({
     await appendMessage({ chatId, message: userMessage });
 
     // fetcging the ai response
-    const res = await fetch("https://chatgpt-lye6.onrender.com/api/chat", {
+    const res = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ChatGpt-clone",
-  description: "A chatbot for anything ",
+  title: "AI Chatbot",
+  description: "An intelligent AI chatbot powered by Next.js and Google Gemini",
   icons: {
     icon: "/logo.png",
   },
